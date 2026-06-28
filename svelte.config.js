@@ -15,7 +15,7 @@ const config = {
 		}),
 		paths: {
 			// DEVE corrispondere al nome del repo su GitHub
-			base: process.env.NODE_ENV === 'production' ? '/PizzeriaCornuto' : '',
+			base: process.env.NODE_ENV === 'production' ? '/WebSite' : '',
 		}
 	}
 };
