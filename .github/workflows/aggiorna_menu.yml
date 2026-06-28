@@ -1,0 +1,92 @@
+name: Scraper Playwright e Parser automatico
+
+on:
+  schedule:
+    # Gira in automatico ogni giorno alle 3:00 del mattino (ora UTC)
+    - cron: '0 3 * * *'
+  
+  workflow_dispatch:
+    # Ti permette di far partire lo scraper a mano premendo un bottone su GitHub
+
+permissions:
+  contents: write    # Serve per salvare i dati JSON nel repository
+  pages: write       # Serve per pubblicare il sito su GitHub Pages
+  id-token: write    # Serve per la sicurezza di GitHub Pages
+
+jobs:
+  build-and-run:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Scarica i file del tuo progetto sul computer virtuale di GitHub
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # 2. Installa Node.js 24 sulla macchina virtuale
+      - name: Configura Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'   # <--- Modificato qui per usare Node 24
+          cache: 'npm'
+
+      # 3. Installa le dipendenze del tuo package.json (Playwright, ecc.)
+      - name: Installa dipendenze
+        run: npm install
+
+      # 4. Installa i browser di Playwright (Indispensabile su GitHub!)
+      - name: Installa i browser di Playwright
+        run: npx playwright install --with-deps chromium
+
+      # 5. Esegue il tuo file di scraping con Playwright (crea il file json grezzo)
+      - name: Avvia lo Scraper
+        run: node scraper.js
+
+      # 6. Esegue il file parser.js (legge il file grezzo e scrive in src/lib)
+      - name: Avvia il Parser
+        run: node parser.js
+
+      # 7. Ricarica i file modificati (compreso src/lib/) su GitHub in automatico
+      - name: Commit e Push dei file aggiornati
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          
+          # Forza git a tracciare la cartella src/lib nel caso non esistesse prima
+          git add src/lib/menu_strutturato.js
+          git add .
+          
+          # Salva i file solo se ci sono reali variazioni nei dati estratti
+          git diff --quiet && git diff --staged --quiet || (git commit -m "🤖 Automazione: Menu aggiornato in src/lib con Node 24 in data $(date +'%d-%m-%Y')" && git push)
+
+  build-and-deploy-site:
+    needs: build-and-run  # <--- CORRETTO QUI (corrisponde al nome del primo job)
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout repository aggiornato
+        uses: actions/checkout@v4
+        with:
+          ref: main # Prende i file appena modificati dallo scraper
+
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build del sito
+        run: npm run build
+
+      - name: Upload Artifacts
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: 'build/'
+
+      - name: Deploy su GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
