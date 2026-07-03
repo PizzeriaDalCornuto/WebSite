@@ -164,6 +164,7 @@ declare module '$env/static/private' {
 	export const GITHUB_OUTPUT: string;
 	export const npm_config_global_prefix: string;
 	export const EDGEWEBDRIVER: string;
+	export const npm_config_allow_scripts: string;
 	export const npm_command: string;
 	export const ANDROID_NDK: string;
 	export const SGX_AESM_ADDR: string;
@@ -387,6 +388,7 @@ declare module '$env/dynamic/private' {
 		GITHUB_OUTPUT: string;
 		npm_config_global_prefix: string;
 		EDGEWEBDRIVER: string;
+		npm_config_allow_scripts: string;
 		npm_command: string;
 		ANDROID_NDK: string;
 		SGX_AESM_ADDR: string;
