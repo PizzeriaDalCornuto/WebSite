@@ -27,9 +27,9 @@
   /* Hero */
   --hero-overlay: linear-gradient(
     135deg,
-    rgba(10, 4, 2, 0.72) 0%,
-    rgba(30, 8, 5, 0.52) 50%,
-    rgba(10, 4, 2, 0.68) 100%
+    rgba(216, 216, 216, 0.70) 0%,
+    rgba(167, 167, 167, 0.50) 50%,
+    rgba(136, 136, 136, 0.55) 100%
   );
   --hero-text: #ffffff;
   --hero-text-muted: rgba(255, 240, 235, 0.85);
