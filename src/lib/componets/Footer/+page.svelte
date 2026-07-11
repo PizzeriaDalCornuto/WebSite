@@ -47,7 +47,7 @@
   </div>
 
   <div class="bottom">
-    <span>© 2026 Pizzeria Dal Cornuto · Torino · Website By Nickolas</span>
+    <span>© 2026 Pizzeria Dal Cornuto · Torino · Website By Nickolas Trovato</span>
   </div>
 </footer>
 
