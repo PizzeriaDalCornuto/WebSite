@@ -28,8 +28,8 @@
   --hero-overlay: linear-gradient(
     135deg,
     rgba(105, 105, 105, 0.5) 0%,
-    rgba(70, 70, 70, 0.2) 50%,
-    rgba(50, 50, 50, 0.3) 100%
+    rgba(80, 80, 80, 0.3) 50%,
+    rgba(50, 50, 50, 0.2) 100%
   );
   --hero-text: #ffffff;
   --hero-text-muted: rgba(255, 240, 235, 0.85);
