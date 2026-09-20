@@ -917,14 +917,14 @@ export const bevande = [
     "icon": "🥤",
     "name": "Coca cola grande  1.5 l",
     "description": "...",
-    "price": "4,00",
+    "price": "4,50",
     "thumb": `${base}/asset/pizze/coca-cola-grande-15-l.jpeg`
   },
   {
     "icon": "🥤",
     "name": "Coca cola zero grande 1.5",
     "description": "...",
-    "price": "4,00",
+    "price": "4,50",
     "thumb": `${base}/asset/pizze/coca-cola-zero-grande-15.jpeg`
   },
   {

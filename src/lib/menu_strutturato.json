@@ -1626,7 +1626,7 @@
     {
       "id": "-OjBrlYpLJ-HYd26Nj8a",
       "nome": "Coca cola grande  1.5 l",
-      "prezzo": 4,
+      "prezzo": 4.5,
       "descrizione": "...",
       "disponibile": true,
       "caratteristiche": {
@@ -1639,7 +1639,7 @@
     {
       "id": "-OjBrw7PsJJkq9vAYM0B",
       "nome": "Coca cola zero grande 1.5",
-      "prezzo": 4,
+      "prezzo": 4.5,
       "descrizione": "...",
       "disponibile": true,
       "caratteristiche": {
