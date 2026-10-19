@@ -1150,7 +1150,7 @@
     {
       "id": "-Oi2M2_CxELurZiUdpKt",
       "nome": "Panuozzo porchetta",
-      "prezzo": 10.5,
+      "prezzo": 11,
       "descrizione": "Mozzarella, bufala, porchetta",
       "disponibile": true,
       "caratteristiche": {
@@ -1163,7 +1163,7 @@
     {
       "id": "-Oi2M79n2PNyvNZ88R8x",
       "nome": "Panuozzo capri",
-      "prezzo": 10.5,
+      "prezzo": 11,
       "descrizione": "Pomodorini, bufala, rucola",
       "disponibile": true,
       "caratteristiche": {
@@ -1176,7 +1176,7 @@
     {
       "id": "-Oi2MEzlOXF-3tjgz0xi",
       "nome": "Panuozzo donna rosa",
-      "prezzo": 10.5,
+      "prezzo": 11,
       "descrizione": "Bufala o burrata, crudo di Parma, rucola",
       "disponibile": true,
       "caratteristiche": {
@@ -1215,7 +1215,7 @@
     {
       "id": "-Oi2MvBY6W7d3wmyI6fA",
       "nome": "Panuozzo vegetariano",
-      "prezzo": 10.5,
+      "prezzo": 11,
       "descrizione": "Fiordilatte, zucchine, melanzane, peperoni, patate al forno, rucola, radicchio",
       "disponibile": true,
       "caratteristiche": {
