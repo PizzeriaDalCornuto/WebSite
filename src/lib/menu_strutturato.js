@@ -449,6 +449,13 @@ export const pizze_classiche = [
     "description": "Pomodoro fior di latte funghi champignon  salsiccia fresca grana basilico ",
     "price": "9,00",
     "thumb": `${base}/asset/pizze/boscaiola.jpeg`
+  },
+  {
+    "icon": "🍕",
+    "name": "Bianca neve",
+    "description": "Fiordilatte ,basilico ",
+    "price": "6,50",
+    "thumb": `${base}/asset/pizze/bianca-neve.jpeg`
   }
 ];
 

@@ -811,6 +811,19 @@
         "surgelato": false
       },
       "ingredienti_extra": []
+    },
+    {
+      "id": "-P4PKq4mc9NcrLZsxu7k",
+      "nome": "Bianca neve",
+      "prezzo": 6.5,
+      "descrizione": "Fiordilatte ,basilico ",
+      "disponibile": true,
+      "caratteristiche": {
+        "vegetarian": false,
+        "piccante": false,
+        "surgelato": false
+      },
+      "ingredienti_extra": []
     }
   ],
   "Focacce": [
